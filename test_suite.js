@@ -1,10 +1,10 @@
 const selenium = require('selenium-webdriver');
 const expect = require('chai').expect;
-let By = selenium.By;
+const By = selenium.By;
 
 describe("Test Suite", function () {
     this.timeout(10000);
-    before(function () {
+    before( () => {
 
         // do something before test suite execution
         // no matter if there are failed cases
