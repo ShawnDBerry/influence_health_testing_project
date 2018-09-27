@@ -1,6 +1,5 @@
 const selenium = require('selenium-webdriver');
 const expect = require('chai').expect;
-let Keys = selenium.Key;
 let By = selenium.By;
 
 describe("Test Suite", function () {
