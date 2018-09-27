@@ -20,7 +20,7 @@ describe("Test Suite", function () {
     });
 
     //creates selenium web driver and load the desired webpage before each test.
-    beforeEach( (done) => {
+    beforeEach( done => {
 
         driver = new selenium.Builder()
             .withCapabilities(selenium.Capabilities.chrome())
@@ -30,7 +30,7 @@ describe("Test Suite", function () {
     });
 
     //closes webdriver after every test case.
-    afterEach(done => {
+    afterEach( done => {
         driver.quit().then(done);
 
 
