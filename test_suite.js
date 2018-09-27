@@ -52,6 +52,7 @@ describe("Test Suite", function () {
         };
 
         //find element
+        driver.sleep(1000);
         driver.findElement(By.className('cover-heading')).getText().then(text => {
             console.log(text);
 
@@ -64,6 +65,7 @@ describe("Test Suite", function () {
         driver.findElement(By.className('btn btn-lg btn-secondary')).click();
 
         //find element
+        driver.sleep(1000);
         driver.findElement(By.className('cover-heading mb-5')).getText().then(text => {
             console.log(text);
 
