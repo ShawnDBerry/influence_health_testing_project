@@ -52,33 +52,58 @@ describe("Test Suite", function () {
             workCompany: 'Unemployed'
         };
 
-        //compare method 1
+        //find element
         driver.findElement(By.className('cover-heading')).getText().then(text => {
             console.log(text);
+
+            //compare text 1
             expect(text).equals(confirmText1);
 
         });
 
+        //click join the fight button.
         driver.findElement(By.className('btn btn-lg btn-secondary')).click();
 
-        //compare method 2
+        //find element
         driver.findElement(By.className('cover-heading mb-5')).getText().then(text => {
             console.log(text);
+
+            //compare text 2
             expect(text).equals(confirmText2);
         });
 
-        //data entry point.
+        //enter username.
         driver.findElement(By.id('inputName')).sendKeys(person.name);
+
+        //pause for a second.
         driver.sleep(1000);
+
+        //enter user email
         driver.findElement(By.id('inputEmail1')).sendKeys(person.email);
+
+        //pause for a second.
         driver.sleep(1000);
+
+        //enter user job role.
         driver.findElement(By.id('inputJobTitle')).sendKeys(person.jobRole);
+
+        //pause for a second.
         driver.sleep(1000);
+
+        //enter user place of employment
         driver.findElement(By.xpath("//input[@placeholder='Company']")).sendKeys(person.workCompany);
+
+        //pause for a second.
         driver.sleep(1000);
+
+        //select work industry from drop down.
         driver.findElement(By.id('inputIndustry')).click();
         driver.findElement(By.xpath("//select[@id='inputIndustry']/option[26]")).click();
+
+        //pause for a second.
         driver.sleep(1000);
+
+        //submit form.
         driver.findElement(By.className('btn btn-lg btn-secondary')).click().then(done);
 
     });
