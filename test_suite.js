@@ -2,9 +2,9 @@ const selenium = require('selenium-webdriver');
 const expect = require('chai').expect;
 let By = selenium.By;
 
-describe("Test Suite", function () {
+describe("Test Suite", () => {
     this.timeout(10000);
-    before(function () {
+    before( () => {
 
         // do something before test suite execution
         // no matter if there are failed cases
@@ -12,7 +12,7 @@ describe("Test Suite", function () {
     });
 
 
-    after(function () {
+    after( () => {
 
         // do something after test suite execution
         // no matter if there are failed cases
@@ -20,7 +20,7 @@ describe("Test Suite", function () {
     });
 
     //creates selenium web driver and load the desired webpage before each test.
-    beforeEach(function (done) {
+    beforeEach( done => {
 
         driver = new selenium.Builder()
             .withCapabilities(selenium.Capabilities.chrome())
@@ -30,14 +30,14 @@ describe("Test Suite", function () {
     });
 
     //closes webdriver after every test case.
-    afterEach(function (done) {
+    afterEach( done => {
         driver.quit().then(done);
 
 
     });
 
     //actual test case.
-    it("Test-1", function (done) {
+    it("Test-1", done => {
 
         //text to use in asserts methods
         let confirmText1 = 'Join the fight against bad bugs';
